@@ -1,0 +1,152 @@
+<html style="background-color:black; 
+
+">
+
+
+
+<head>
+        <title>Yellow Emperor</title>
+        <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">    <style> 
+        body {
+font-family: 'Press Start 2P', cursive;
+           font-size:40px; 
+        letter-spacing: 6px; 
+          font-weight: bold;
+         max-width: 800px;
+        margin: auto;
+        text-align: center;
+        }
+
+        
+
+
+
+
+
+
+        .question{
+
+          position:fixed;
+
+          top:700;
+        }
+
+ a {
+        background-color: yellow;
+           color: white;
+          padding: 1em 1.5em;
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
+            border-radius: 25px;
+
+        }
+
+        a:hover {
+          background-color: black;
+        }
+
+        a:active {
+          box-shadow: none;
+/*          top: 5px;
+*/        }
+
+
+
+
+
+
+    </style><style></style></head>
+    
+    <body> 
+
+ 
+
+
+
+
+  <div style="font-size: 15px; color: white" id="typedtext">On that day, the Yellow Emperor showed off his palace. In a long descent, they had just left the first western terraces, which – like the tiers of an unimaginable amphitheatre – slope down to a paradise whose metal mirrors and interwoven juniper hedges gave a hint of the labyrinth.</div>
+
+
+
+
+
+
+
+        <script>
+
+</script>
+
+
+    
+</div>
+
+
+
+      <script>
+        // set up text to print, each item in array is new line
+var aText = new Array(
+" The Yellow Emperor showed off his palace. In a long descent, they had just left the first western terraces, which – like the tiers of an unimaginable amphitheatre – slope down to a paradise whose metal mirrors and interwoven juniper hedges gave a hint of the labyrinth________________________The two men lost themselves in it – as if they were entering into a game. At about midnight, observation of the planets allowed them to extricate themselves from that whole sector, which seemed enchanted________________________. His composition sank into oblivion because it deserved oblivion and his descendants still seek, nor will they find, the word that contains the universe."
+);
+
+
+
+
+var iSpeed = 170; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+
+typewriter();
+        
+      </script>
+
+
+
+
+<img style="padding-top: 3em" src="imgf/pix.gif">
+
+
+
+
+</body>
+
+
+
+
+
+</html>
